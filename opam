@@ -1,0 +1,29 @@
+opam-version: "2.0"
+name: "ttweetnacl"
+synopsis: "Thin bindings to TweetNaCl for OCaml"
+description: """\
+Ttweetnacl is an OCaml library providing thin bindings to the
+[TweetNaCl][tweetnacl] cryptographic library. 
+
+Tweetnacl has no dependencies, the binding code is distributed under
+the ISC license and the integrated TweetNaCl C code is in the public
+domain.
+
+Homepage: <https://erratique.ch/software/ttweetnacl>
+
+[tweetnacl]: https://tweetnacl.cr.yp.to/"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The ttweetnacl programmers"
+license: "ISC"
+tags: ["cryptography" "bindings" "nacl" "org:erratique"]
+homepage: "https://erratique.ch/software/ttweetnacl"
+doc: "https://erratique.ch/software/ttweetnacl/doc"
+bug-reports: "https://github.com/dbuenzli/ttweetnacl/issues"
+depends: [
+  "ocaml" {>= "4.13.0"}
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build & >= "1.0.3"}
+]
+build: ["ocaml" "pkg/pkg.ml" "build" "--dev-pkg" "%{dev}%"]
+dev-repo: "git+https://erratique.ch/repos/ttweetnacl.git"

@@ -1,0 +1,6 @@
+{0 Ttweetnacl {%html: <span class="version">%%VERSION%%</span>%}}
+
+Ttweetnacl provides thin bindings to the
+{{:https://tweetnacl.cr.yp.to/}TweetNaCl} cryptographic library.
+
+{!modules: Ttweetnacl}

@@ -1,0 +1,9 @@
+true : bin_annot, safe_string
+
+<_b0> : -traverse
+<src> : include
+<src/ttweetnacl.{cma,cmxa}> : record_ttweetnacl_stubs
+<src/ttweetnacl.cmxs> : link_ttweetnacl_stubs
+
+<test> : include
+<test/*> : use_ttweetnacl_stubs

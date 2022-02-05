@@ -1,0 +1,9 @@
+description "Thin bindings to TweetNaCl"
+version = "%%VERSION_NUM%%"
+
+requires = ""
+archive(byte) = "ttweetnacl.cma"
+archive(native) = "ttweetnacl.cmxa"
+plugin(byte) = "ttweetnacl.cma"
+plugin(native) = "ttweetnacl.cmxs"
+exists_if = "ttweetnacl.cma"
