@@ -1,11 +1,11 @@
 opam-version: "2.0"
 name: "ttweetnacl"
-synopsis: "Thin bindings to TweetNaCl for OCaml"
+synopsis: "Thin bindings to TweetNaCl cryptography for OCaml"
 description: """\
-Ttweetnacl is an OCaml library providing thin bindings to the
-[TweetNaCl][tweetnacl] cryptographic library. 
+Ttweetnacl is an OCaml module providing thin bindings to the
+[TweetNaCl][tweetnacl] cryptographic library.
 
-Tweetnacl has no dependencies, the binding code is distributed under
+Ttweetnacl has no dependencies. The binding code is distributed under
 the ISC license and the integrated TweetNaCl C code is in the public
 domain.
 

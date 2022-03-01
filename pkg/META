@@ -1,4 +1,4 @@
-description "Thin bindings to TweetNaCl"
+description = "Thin bindings to TweetNaCl cryptography"
 version = "%%VERSION_NUM%%"
 
 requires = ""

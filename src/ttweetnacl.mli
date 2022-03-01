@@ -11,7 +11,7 @@
     {ul
     {- {!Bigcrypto} uses {{!bigbytes}bigbytes} values which are managed
        by the C allocator. Calls to the C primitives may {{:https://ocaml.org/manual/intfc.html#ss:parallel-execution-long-running-c-code}
-       release the runtime system} system when deemed appropriate.}
+       release the runtime system} when deemed appropriate.}
     {- {!Crypto} uses [bytes] values which are managed by the OCaml
        garbage collector and thus may be copied around in memory – you may
        care, or not. Calls to the C primitives never release the runtime
