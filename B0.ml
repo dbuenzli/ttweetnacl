@@ -19,7 +19,7 @@ let test_exe file ~doc =
   let file = Fpath.v file in
   let srcs = [test_src file] in
   let requires = [ ttweetnacl ] in
-  B0_ocaml.exe (Fpath.basename ~strip_exts:true file) ~doc ~srcs ~requires
+  B0_ocaml.exe (Fpath.basename ~drop_exts:true file) ~doc ~srcs ~requires
 
 let test = test_exe "test.ml" ~doc:"Ttweetnacl tests"
 
