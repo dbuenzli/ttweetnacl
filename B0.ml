@@ -8,19 +8,18 @@ let ttweetnacl = B0_ocaml.libname "ttweetnacl"
 (* Libraries *)
 
 let ttweetnacl_lib =
-  let srcs = Fpath.[ `Dir (v "src") ] in
+  let srcs = Filepath.[ `Dir (v "src") ] in
   let requires = [] in
   B0_ocaml.lib ttweetnacl ~doc:"The ttweetnacl library" ~srcs ~requires
 
 (* Tests *)
 
-let test_src f = `File Fpath.(v "test" // f)
+let test_src f = `File Filepath.(v "test" // f)
 let test_exe file ~doc =
-  let file = Fpath.v file in
+  let file = Filepath.v file in
   let srcs = [test_src file] in
   let requires = [ ttweetnacl ] in
-  B0_ocaml.exe (Fpath.basename ~drop_exts:true file) ~doc ~srcs ~requires
-
+  B0_ocaml.exe (Filepath.basename ~drop_exts:true file) ~doc ~srcs ~requires
 let test = test_exe "test.ml" ~doc:"Ttweetnacl tests"
 
 (* Packs *)
